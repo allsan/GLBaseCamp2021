@@ -1,0 +1,4 @@
+---
+- name: distribution name and version
+  shell: cat /etc/os-release | grep 'PRETTY_NAME' > ~/name.txt
+  ignore_errors: true

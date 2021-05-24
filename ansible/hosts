@@ -1,0 +1,11 @@
+[group1:children]
+group2
+group3
+group4
+[group2]
+ansible-c8-2
+[group3]
+ansible-c8-3
+[group4]
+ansible-c8-4
+

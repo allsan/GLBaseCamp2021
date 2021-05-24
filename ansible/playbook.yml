@@ -1,0 +1,18 @@
+---
+- hosts: group1
+  roles:
+    - { role: make_file }
+
+- hosts: group1
+  roles:
+    - { role: distr }
+
+- hosts: group1
+  tasks:
+    - name: cat name.txt
+      command: cat name.txt chdir=/home/admin
+      register: command_output
+
+    - name: print result to console
+      debug:
+        msg: "{{ command_output.stdout }}"
