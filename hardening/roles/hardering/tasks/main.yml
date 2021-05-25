@@ -1,0 +1,13 @@
+---
+
+- name: "Compliance check of having no reference to the Userid in password and configuring if needed"
+# https://docs.ansible.com/ansible/latest/collections/community/general/pamd_module.html#ansible-collections-community-general-pamd-module
+  community.general.pamd:
+    name: common-password
+    type: password
+    control: requisite
+    module_path: pam_cracklib.so
+    module_arguments: reject_username,enforce_for_root
+    state: args_present
+    backup: yes
+  register: check_result

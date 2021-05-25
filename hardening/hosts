@@ -1,0 +1,9 @@
+[servers:children]
+ubuntu
+centos
+[ubuntu]
+ansible-u20-1
+ansible-u20-2
+[centos]
+ansible-c8-1
+ansible-c8-2
